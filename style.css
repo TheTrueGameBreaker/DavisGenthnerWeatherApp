@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "papyrus";
+    background-color: rgb(107, 218, 248);
+}
+
+.container{
+    padding: 20px 70px;
+    color: rgb(0, 0, 0);
+}
+
+.current-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .cityName{
+    width: 150px;
+    height: auto;
+}
+
+.container .btn{
+    
+}
+
+.date-container{
+    font-weight: 100;
+}
+
+.date-container #am-pm{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.date-container .date{
+    font-size: 30px;
+}
+
+.place-container{
+    text-align: end;
+}
+
+.place-container .timeZone{
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.place-container .country{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.current-info .weatherInfo{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(24,24,27,0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.current-info .weatherInfo .weatherItem{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fiveDayForcast{
+    background: rgba(24,24,27,0.8);
+    padding: 25px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    color: rgb(255,255,255);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.fiveDayForcast .today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fiveDayForcast .today .day{
+    padding: 5px 15px;
+    background: rgb(123, 123, 123);
+    border-radius: 50px;
+    text-align: center;
+}
+
+.fiveDayForcast .today .temp{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.fiveDayForcast .futureForcast{
+    display: flex;
+}
+
+.futureForcast .furture-forcast-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.futureForcast .furture-forcast-item .day{
+    padding: 5px 15px;
+    background: rgb(123, 123, 123);
+    border-radius: 50px;
+    text-align: center;
+}
+
+.futureForcast .furture-forcast-item .temp{
+    font-weight: 100;
+}
+
+.btn {
+    background-color: blue;
+    border-radius: 1px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="script.js" defer></script>
+    <title>Davis Genthner Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="current-info">
+            <div class="date-container">
+                <input type="text" class="cityName" id="cityName">
+                <button class="btn" id="btn">Search</button>
+                <div class="date" id="date">
+                    Monday, 1 Jan
+                </div>
+                <div class="weatherInfo" id="weatherInfo"></div>
+            </div>
+            <div class="place-container">
+                <div class="timeZone" id="timeZone">Pacific Time</div>
+                <div class="country" id="country">USA</div>
+            </div>
+        </div>
+    </div>
+    <div class="fiveDayForcast">
+        <div class="futureForcast" id="futureForcast1">
+        </div>
+        <div class="futureForcast" id="futureForcast2">
+        </div>
+        <div class="futureForcast" id="futureForcast3">
+        </div>
+        <div class="futureForcast" id="futureForcast4">
+        </div>
+        <div class="futureForcast" id="futureForcast5">
+        </div>
+    </div>
+</body>
+</html>
