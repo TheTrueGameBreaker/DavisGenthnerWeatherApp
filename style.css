@@ -1,3 +1,5 @@
+/* This it the basic code of the body of the website */
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -14,6 +16,8 @@ body{
     color: rgb(0, 0, 0);
 }
 
+/* This is the style for the current weather box */
+
 .current-info{
     display: flex;
     justify-content: space-between;
@@ -23,37 +27,6 @@ body{
 .container .cityName{
     width: 150px;
     height: auto;
-}
-
-.container .btn{
-    
-}
-
-.date-container{
-    font-weight: 100;
-}
-
-.date-container #am-pm{
-    font-size: 30px;
-    margin-left: 20px;
-}
-
-.date-container .date{
-    font-size: 30px;
-}
-
-.place-container{
-    text-align: end;
-}
-
-.place-container .timeZone{
-    font-size: 30px;
-    font-weight: 200;
-}
-
-.place-container .country{
-    font-size: 12px;
-    font-weight: 700;
 }
 
 .current-info .weatherInfo{
@@ -70,6 +43,9 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
+
+/* This is the code for the popup five day forcast */
 
 .fiveDayForcast{
     background: rgba(24,24,27,0.8);
@@ -126,6 +102,9 @@ body{
 .futureForcast .furture-forcast-item .temp{
     font-weight: 100;
 }
+
+
+/* This is the style for the search button */
 
 .btn {
     background-color: blue;

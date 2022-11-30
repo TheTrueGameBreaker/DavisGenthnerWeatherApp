@@ -1,3 +1,5 @@
+// This is the code that defines most of the variables that will be used in the html
+
 const searchButton = document.getElementById('btn')
 const timeEl = document.getElementById('time');
 const dateEl = document.getElementById('date');
@@ -15,26 +17,15 @@ const furture5El = document.getElementById('futureForcast5')
 const days = ['Sunday', 'Monday', 'Tuesday', 'WednesDay', 'Thursday', 'Friday', 'Saturday'];
 const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
+// The very important API key that gets the weather information
+
 const Api_Key = "c793e03b4a35a394972ca0120e97b1da";
 
-setInterval(() =>{
-    const time = new Date();
-    const month = time.getMonth();
-    const date = time.getDate();
-    const day = time.getDay();
-    const hour = time.getHours();
-    const hoursIn12 = hour >= 13 ? hour %12: hour
-    const minutes = time.getMinutes();
-    const ampm = hour >= 12 ? 'Pm' : 'Am'
-
-    timeEl.innerHTML = hoursIn12 + ':' + minutes + ' ' + `<span id="am-pm">${ampm }</span>`
-
-    dateEl.innerHTML = days[day] + ', ' + date + '' + months[month]
-
-},1000);
-
+// The code that makes the search button work
 
 searchButton.addEventListener('click', getWeatherData)
+
+// The function that retrive the weather data using the API
 
 function getWeatherData (){
     const city_name = document.getElementById('cityName').value
@@ -44,6 +35,8 @@ function getWeatherData (){
         showWeatherData(data);
      })
 }
+
+// The function that shoes the weather data retrived from the API
 
 function showWeatherData(data){
     let {temp, humidity} = data.main;
@@ -63,8 +56,12 @@ function showWeatherData(data){
         <div>${speed}mph</div>
     </div>`;
 
+// The console logs just to make sure the latitude and longitude are recorded
+
     console.log(lat);
     console.log(lon);
+
+// The part of the code that actually interprets the weather data
 
     fetch (`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${Api_Key}`).then(res => res.json()).then(data => {
         console.log(data);
@@ -72,6 +69,9 @@ function showWeatherData(data){
         let temp7 = data.list[7].main.temp
         let humidity7 = data.list[7].main.humidity
         let wind7 = data.list[7].wind.speed
+
+// This part of the code is what changes the vaulse on page to match the data
+
         furture1El.innerHTML =
         `<div class="furture-forcast-item">
             <div class="day">${date7}</div>
